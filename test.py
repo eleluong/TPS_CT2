@@ -32,8 +32,8 @@ def work_log(work_):
         json.dump(outputs, f, ensure_ascii = False)
 
 def pool_handler():
-    p = Pool(5)
-    work = (0, 1, 2, 3, 4)
+    p = Pool(10)
+    work = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
     p.map(work_log, work)
 
 pool_handler()
