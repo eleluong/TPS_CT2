@@ -13,7 +13,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 )
 
 model_path = "./llama2_7b_chat_ct2"
-generator = ctranslate2.Generator(model_path, device = "cuda", compute_type = "int8_bfloat16", inter_threads = 5)
+generator = ctranslate2.Generator(model_path, device = "cuda", compute_type = "int8_bfloat16", inter_threads = 20)
 
 tokenizer.pad_token = tokenizer.eos_token
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
