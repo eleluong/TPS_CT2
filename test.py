@@ -26,7 +26,7 @@ def work_log(work_):
     outputs = []
     with open(f"./benchmark_data/alpaca_instructions_{work_}.json") as f:
         data = json.load(f)
-    for i in data[:100]:
+    for i in data[:40]:
         outputs.append(post_request(i))
     with open(f"./run_log/results_{work_}.json", "w") as f:
         json.dump(outputs, f, ensure_ascii = False)

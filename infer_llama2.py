@@ -2,7 +2,6 @@
 from transformers import AutoTokenizer
 import torch 
 import ctranslate2
-import gradio as gr
 import time
 
 tokenizer_path = "meta-llama/Llama-2-7b-chat-hf"
